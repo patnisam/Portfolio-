@@ -112,7 +112,7 @@ def run_gemini_agent(user_query: str, active_sections: list,selected_source: str
         Respond ONLY with JSON: {{"tool": "SQL" | "FORECAST" | "STRATEGY_RAG", "parameter": "channel name or focus"}}
         """
         routing_response = client.models.generate_content(
-            model='gemini-3.5-flash',
+            model='gemini-3.1-flash-lite',
             contents=routing_prompt,
             config=types.GenerateContentConfig(response_mime_type="application/json")
         )
